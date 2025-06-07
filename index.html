@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портфолио фронтенд-разработчика Базар-Гуро">
   <title>Портфолио | Базар-Гуро</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -14,11 +16,11 @@
   <header class="header" id="header">
     <div class="container">
       <div class="header-wrapper">
-        <a class="logo" href="#">BazarGuro</a>
-        <nav class="nav">
-          <ul class="nav-menu">
+        <a class="logo" href="#" aria-label="На главную страницу">BazarGuro</a>
+        <nav class="nav" aria-label="Основное меню">
+          <ul class="nav-menu" id="main-menu">
             <li class="nav-item">
-              <a class="nav-link" href="#home">Главная</a>
+              <a class="nav-link" href="#home" aria-current="page">Главная</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">Обо мне</a>
@@ -34,7 +36,10 @@
             </li>
           </ul>
         </nav>
-        <div class="nav-menu-btn"></div>
+        <button class="nav-menu-btn" aria-label="Меню" aria-expanded="false" aria-controls="main-menu"
+          aria-haspopup="true">
+          <span aria-hidden="true"></span>
+        </button>
       </div>
     </div>
   </header>
@@ -46,11 +51,11 @@
         <div class="home-wrapper">
           <div class="home-content">
             <h1 class="home-title">Приветствую, я <span>Базар-Гуро</span></h1>
-            <h3 class="home-subtitle">Я Фронтенд-разработчик</h3>
+            <h3 class="home-subtitle">Фронтенд-разработчик</h3>
             <a href="#contact" class="btn">Связаться со мной</a>
           </div>
           <div class="home-img">
-            <img src="img/main_img.png" alt="Фото разработчика">
+            <img src="img/main_img.png" alt="Фото разработчика Базар-Гуро" loading="lazy" width="500" height="500">
           </div>
         </div>
       </div>
@@ -62,7 +67,7 @@
         <h2 class="section-title">Обо мне</h2>
         <div class="about-wrapper">
           <div class="about-img">
-            <img src="img/about_img.png" alt="Фото разработчика">
+            <img src="img/about_img.png" alt="Фото разработчика за работой" loading="lazy" width="400" height="400">
           </div>
           <div class="about-content">
             <p class="about-text">Пока что мой стек — HTML, CSS, JavaScript, но я активно учусь и
@@ -81,23 +86,23 @@
         <h2 class="section-title">Навыки</h2>
         <div class="skills-wrapper">
           <div class="skill-item">
-            <i class="fab fa-html5"></i>
+            <i class="fab fa-html5" aria-hidden="true"></i>
             <h3 class="skill-name">HTML</h3>
           </div>
           <div class="skill-item">
-            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-css3-alt" aria-hidden="true"></i>
             <h3 class="skill-name">CSS</h3>
           </div>
           <div class="skill-item">
-            <i class="fab fa-js"></i>
+            <i class="fab fa-js" aria-hidden="true"></i>
             <h3 class="skill-name">JavaScript</h3>
           </div>
           <div class="skill-item">
-            <i class="fas fa-mobile-alt"></i>
+            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
             <h3 class="skill-name">Адаптивная верстка</h3>
           </div>
           <div class="skill-item">
-            <i class="fas fa-globe"></i>
+            <i class="fas fa-globe" aria-hidden="true"></i>
             <h3 class="skill-name">Кроссбраузерная верстка</h3>
           </div>
         </div>
@@ -110,29 +115,32 @@
         <h2 class="section-title">Портфолио</h2>
         <div class="portfolio-wrapper">
           <div class="portfolio-item">
-            <img src="img/briaton.png" alt="Проект Briaton">
+            <img src="img/briaton.png" alt="Скриншот каталога товаров Briaton" loading="lazy" width="600" height="400">
             <div class="portfolio-overlay">
               <h3 class="portfolio-title">Каталог товаров - Briaton</h3>
-              <a href="https://github.com/BazarGuro/Briaton" target="_blank" class="portfolio-link">Подробнее</a>
+              <a href="https://github.com/BazarGuro/Briaton" target="_blank" class="portfolio-link"
+                rel="noopener noreferrer">Подробнее</a>
             </div>
           </div>
           <div class="portfolio-item">
-            <img src="img/minesweeper.png" alt="Классическая игра 'Сапёр'">
+            <img src="img/minesweeper.png" alt="Скриншот игры Сапёр" loading="lazy" width="600" height="400">
             <div class="portfolio-overlay">
               <h3 class="portfolio-title">Классическая игра "Сапёр"</h3>
-              <a href="https://bazarguro.github.io/MineSweeper/" target="_blank" class="portfolio-link">Подробнее</a>
+              <a href="https://bazarguro.github.io/MineSweeper/" target="_blank" class="portfolio-link"
+                rel="noopener noreferrer">Подробнее</a>
             </div>
           </div>
           <div class="portfolio-item">
-            <img src="img/todo.png" alt="Проект 3">
+            <img src="img/todo.png" alt="Скриншот списка задач" loading="lazy" width="600" height="400">
             <div class="portfolio-overlay">
               <h3 class="portfolio-title">Список задач (ToDo List)</h3>
-              <a href="https://bazarguro.github.io/ToDo-List/" target="_blank" class="portfolio-link">Подробнее</a>
+              <a href="https://bazarguro.github.io/ToDo-List/" target="_blank" class="portfolio-link"
+                rel="noopener noreferrer">Подробнее</a>
             </div>
           </div>
         </div>
         <div class="portfolio-github">
-          <a href="https://github.com/BazarGuro" target="_blank" class="btn">Мой GitHub</a>
+          <a href="https://github.com/BazarGuro" target="_blank" class="btn" rel="noopener noreferrer">Мой GitHub</a>
         </div>
       </div>
     </section>
@@ -140,7 +148,7 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
       <div class="container">
-        <h2 class="section-title">Контакты</h2>
+        <h2 class="section-title" id="contact-heading">Контакты</h2>
         <div class="contact-header">
           <h3 class="contact-subtitle">Готов к сотрудничеству!</h3>
           <p class="contact-description">Если вам нужен адаптивный фронтенд или помощь в доработке проекта — давайте
@@ -149,27 +157,30 @@
         <div class="contact-wrapper">
           <div class="contact-links">
             <div class="contact-item">
-              <i class="fas fa-envelope"></i>
+              <i class="fas fa-envelope" aria-hidden="true"></i>
               <h3 class="contact-title">Email</h3>
-              <p class="contact-text"><a href="mailto:b.zhimbaev@yandex.com" target="_blank">b.zhimbaev@yandex.com</a>
-              </p>
+              <p class="contact-text"><a href="mailto:b.zhimbaev@yandex.com">b.zhimbaev@yandex.com</a></p>
             </div>
             <div class="contact-item">
-              <i class="fab fa-telegram"></i>
+              <i class="fab fa-telegram" aria-hidden="true"></i>
               <h3 class="contact-title">Telegram</h3>
-              <p class="contact-text"><a href="https://t.me/BazarGuro" target="_blank">@BazarGuro</a></p>
+              <p class="contact-text"><a href="https://t.me/BazarGuro" target="_blank"
+                  rel="noopener noreferrer">@BazarGuro</a></p>
             </div>
           </div>
           <div class="contact-form">
-            <form action="https://formsubmit.co/b.zhimbaev@yandex.com" method="POST">
+            <form action="https://formsubmit.co/b.zhimbaev@yandex.com" method="POST" aria-labelledby="contact-heading">
               <div class="form-group">
-                <input type="text" name="name" placeholder="Имя" required>
+                <label for="name" class="visually-hidden">Имя</label>
+                <input type="text" id="name" name="name" placeholder="Имя" required autofocus>
               </div>
               <div class="form-group">
-                <input type="email" name="email" placeholder="Ваша почта" required>
+                <label for="email" class="visually-hidden">Ваша почта</label>
+                <input type="email" id="email" name="email" placeholder="Ваша почта" required>
               </div>
               <div class="form-group">
-                <textarea name="message" placeholder="Введите сообщение" required></textarea>
+                <label for="message" class="visually-hidden">Введите сообщение</label>
+                <textarea id="message" name="message" placeholder="Введите сообщение" required></textarea>
               </div>
               <button type="submit" class="btn">Отправить</button>
 
@@ -186,7 +197,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="footer-text">© 2025 by BazarGuro Zhimbaev. All rights reserved.</p>
+      <p class="footer-text">&copy; 2025 Zhimbaev Bazar-Guro. Все права защищены.</p>
     </div>
   </footer>
 

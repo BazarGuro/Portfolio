@@ -1,10 +1,10 @@
-// Мобильное меню
+/// Мобильное меню
 const navMenu = document.querySelector('.nav-menu');
 const navMenuBtn = document.querySelector('.nav-menu-btn');
 
 navMenuBtn.addEventListener('click', () => {
   navMenu.classList.toggle('active');
-  navMenuBtn.classList.toggle('close');
+  navMenuBtn.classList.toggle('open');
 });
 
 // Закрытие меню при клике на ссылку
@@ -12,7 +12,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
     navMenu.classList.remove('active');
-    navMenuBtn.classList.remove('close');
+    navMenuBtn.classList.remove('open');
   });
 });
 
@@ -95,15 +95,15 @@ function showError(input, message) {
   if (existingError) {
     existingError.remove();
   }
-  
+
   // Создаем новое сообщение об ошибке
   const errorDiv = document.createElement('div');
   errorDiv.className = 'error-message';
   errorDiv.textContent = message;
-  
+
   // Добавляем сообщение после поля ввода
   input.parentElement.appendChild(errorDiv);
-  
+
   // Добавляем класс error для поля с ошибкой
   input.classList.add('error');
 }
@@ -136,7 +136,7 @@ function validateName() {
 function validateEmail() {
   const emailValue = emailInput.value.trim();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
+
   if (emailValue === '') {
     showError(emailInput, 'Пожалуйста, введите ваш email');
     return false;
@@ -170,12 +170,12 @@ emailInput.addEventListener('input', validateEmail);
 messageInput.addEventListener('input', validateMessage);
 
 // Обработчик отправки формы
-contactForm.addEventListener('submit', function(event) {
+contactForm.addEventListener('submit', function (event) {
   // Проверяем все поля перед отправкой
   const isNameValid = validateName();
   const isEmailValid = validateEmail();
   const isMessageValid = validateMessage();
-  
+
   // Если хотя бы одно поле не прошло валидацию, отменяем отправку формы
   if (!isNameValid || !isEmailValid || !isMessageValid) {
     event.preventDefault();
